@@ -118,17 +118,13 @@ class MainActivity : ComponentActivity() {
         val stringBuilder = StringBuilder()
         val blocks: List<Text.TextBlock> = texts.getTextBlocks()
         if (blocks.size == 0) {
-            //showToast("No text found")
             return "No text found"
         }
-        //mGraphicOverlay.clear()
         for (i in blocks.indices) {
             val lines: List<Text.Line> = blocks[i].getLines()
             for (j in lines.indices) {
                 val elements: List<Text.Element> = lines[j].getElements()
                 for (k in elements.indices) {
-                    //val textGraphic: Graphic = TextGraphic(mGraphicOverlay, elements[k])
-                    //mGraphicOverlay.add(textGraphic)
                     //Log.i("MLKITDEBUG", elements[k].text + " " + elements[k].confidence.toString())
                     stringBuilder.appendLine(elements[k].text)
 
